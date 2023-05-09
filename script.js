@@ -20,11 +20,11 @@ start.addEventListener('click', () => {
             elapsedTime = new Date().getTime() - startTime;
             millisecondsDiplay.innerText = elapsedTime;
             
-            const currentTime = Math.floor(elapsedTime / 1000);
-            if (currentTime > lastLoggedTime) {
-                secondsDisplay.innerText = currentTime;
+            const currentTimeInSeconds = Math.floor(elapsedTime / 1000);
+            if (currentTimeInSeconds > lastLoggedTime) {
+                secondsDisplay.innerText = currentTimeInSeconds;
                 console.log('action');
-                lastLoggedTime = currentTime;
+                lastLoggedTime = currentTimeInSeconds;
             }
 
         }, 1)
