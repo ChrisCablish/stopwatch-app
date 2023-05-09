@@ -8,6 +8,8 @@ const reset = document.getElementById('reset');
 let intervalID;
 let startTime = 0;
 let elapsedTime = 0;
+let seconds = 0;
+let lastLoggedTime = 0;
 
 //START BUTTON EVENT
 start.addEventListener('click', () => {
@@ -17,6 +19,14 @@ start.addEventListener('click', () => {
         intervalID = setInterval (() => {
             elapsedTime = new Date().getTime() - startTime;
             millisecondsDiplay.innerText = elapsedTime;
+            
+            const currentTime = Math.floor(elapsedTime / 1000);
+            if (currentTime > lastLoggedTime) {
+                secondsDisplay.innerText = currentTime;
+                console.log('action');
+                lastLoggedTime = currentTime;
+            }
+
         }, 1)
     }
 });
