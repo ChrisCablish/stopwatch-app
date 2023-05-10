@@ -11,3 +11,5 @@ Functions:
 -stop button pauses timer  
 -start button will resume timer if it is paused  
 -reset button sets timer back at 0  
+
+Live site URL: https://chriscablish.github.io/stopwatch-app/
