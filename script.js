@@ -1,53 +1,3 @@
-// const millisecondsDiplay = document.getElementById('milliseconds');
-// const secondsDisplay = document.getElementById('seconds');
-// const minutesDisplay = document.getElementById('minutes');
-
-// const start = document.getElementById('start');
-// const stop = document.getElementById('stop');
-// const reset = document.getElementById('reset');
-
-// let intervalID;
-// let startTime = 0; 
-// let millisecondsSinceStart = 0; 
-// let lastLoggedSeconds = 0;
-// let lastLoggedMinutes = 0; 
-// let currentTimeInSeconds;
-// let currentTimeInMinutes;
-
-// start.addEventListener('click', () => {
-//     if (!intervalID) {
-//         startTime = new Date().getTime() - millisecondsSinceStart;
-//         intervalID = setInterval (() => {
-//             millisecondsSinceStart = new Date().getTime() - startTime;
-//             millisecondsDiplay.innerText = millisecondsSinceStart;
-
-//             currentTimeInSeconds = Math.floor(millisecondsSinceStart / 1000);
-//             if (currentTimeInSeconds > lastLoggedSeconds) {
-//                 secondsDisplay.innerText = currentTimeInSeconds;
-//             }
-//             currentTimeInMinutes = Math.floor(currentTimeInSeconds / 60);
-//             if (currentTimeInMinutes > lastLoggedMinutes) {
-//                 minutesDisplay.innerText = currentTimeInMinutes;
-//             }
-
-//         }, 1);
-//     }
-// });
-
-// stop.addEventListener('click', () => {
-//     clearInterval(intervalID);
-//     intervalID = null; 
-// });
-
-
-// reset.addEventListener('click', () => {
-//     millisecondsSinceStart = 0;
-//     millisecondsDiplay.innerText = millisecondsSinceStart;
-//     currentTimeInSeconds = Math.floor(millisecondsSinceStart / 1000);
-//     secondsDisplay.innerText = currentTimeInSeconds;
-// });
-
-
 const millisecondsDisplay = document.getElementById('milliseconds');
 const secondsDisplay = document.getElementById('seconds');
 const minutesDisplay = document.getElementById('minutes');
@@ -55,6 +5,10 @@ const minutesDisplay = document.getElementById('minutes');
 const start = document.getElementById('start');
 const stop = document.getElementById('stop');
 const reset = document.getElementById('reset');
+
+millisecondsDisplay.innerText = '000';
+secondsDisplay.innerText = '00';
+minutesDisplay.innerText = '00';
 
 let intervalID;
 let startTime = 0;
